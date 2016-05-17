@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D547BA12-5D1F-454A-993D-EB175BF24B6C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>X0Algorithm</RootNamespace>
+    <AssemblyName>X0Algorithm</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Algorithms\AlgorithmBase.cs" />
+    <Compile Include="Domain\Algorithms\DefaultAlgorithm.cs" />
+    <Compile Include="Domain\Algorithms\Participants\AlexStrebkoAlgorithm.cs" />
+    <Compile Include="Domain\Algorithms\Participants\ArtemVelmakinAlgorithm.cs" />
+    <Compile Include="Domain\Algorithms\Participants\NazarGrycshukAlgorithm.cs" />
+    <Compile Include="Domain\Algorithms\Participants\VasylKorzhykAlgorithm.cs" />
+    <Compile Include="Domain\Engine\AlgorithmExecutor.cs" />
+    <Compile Include="Domain\Engine\Cases\Case10.cs" />
+    <Compile Include="Domain\Engine\Cases\Case100.cs" />
+    <Compile Include="Domain\Engine\Cases\Case1000.cs" />
+    <Compile Include="Domain\Engine\Cases\Case10000.cs" />
+    <Compile Include="Domain\Engine\Cases\Case4.cs" />
+    <Compile Include="Domain\Engine\Cases\CaseBase.cs" />
+    <Compile Include="Domain\Engine\Cases\Case3.cs" />
+    <Compile Include="Domain\Engine\Cases\Repeats\CaseRepeat.cs" />
+    <Compile Include="Domain\Engine\Cases\Repeats\CaseRepeats.cs" />
+    <Compile Include="Domain\Engine\PerformanceMeter.cs" />
+    <Compile Include="Domain\Engine\ReportProcessor.cs" />
+    <Compile Include="Domain\Engine\Printer.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase3X3Draw.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase3X3WonFirstColumn0.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase3X3WonFirstColumnX.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase3X3WonFirstRow0.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase3X3WonFirstRowX.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase3X3WonLastColumn0.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase3X3WonLastColumnX.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase3X3WonLastRow0.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase3X3WonLastRowX.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase3X3WonLeftDiagonal0.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase3X3WonLeftDiagonalX.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase3X3WonRightDiagonal0.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase3X3WonRightDiagonalX.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase4X4Draw.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase4X4WonColumn0.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase4X4WonColumnX.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase4X4WonLeftDiagonal0.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase4X4WonLeftDiagonalX.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase4X4WonRightDiagonal0.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase4X4WonRightDiagonalX.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase4X4WonRow0.cs" />
+    <Compile Include="Domain\Engine\TestCases\TestCase4X4WonRowX.cs" />
+    <Compile Include="Domain\Engine\TestRunner.cs" />
+    <Compile Include="Domain\Engine\Runner.cs" />
+    <Compile Include="Domain\Engine\TableBuilder.cs" />
+    <Compile Include="Domain\Engine\Engine.cs" />
+    <Compile Include="Domain\Extensibility\Algorithms\IDefaultAlgorithm.cs" />
+    <Compile Include="Domain\Extensibility\Algorithms\IAlgorithm.cs" />
+    <Compile Include="Domain\Extensibility\Engine\IAlgorithmExecutor.cs" />
+    <Compile Include="Domain\Extensibility\Engine\Cases\Repeats\ICaseRepeat.cs" />
+    <Compile Include="Domain\Extensibility\Engine\IPerformanceMeter.cs" />
+    <Compile Include="Domain\Extensibility\Engine\IReportProcessor.cs" />
+    <Compile Include="Domain\Extensibility\Engine\IPrinter.cs" />
+    <Compile Include="Domain\Extensibility\Engine\Cases\ICase.cs" />
+    <Compile Include="Domain\Extensibility\Engine\IRunner.cs" />
+    <Compile Include="Domain\Extensibility\Engine\ITableBuilder.cs" />
+    <Compile Include="Domain\Extensibility\Engine\IEngine.cs" />
+    <Compile Include="Domain\Extensibility\Engine\TestCases\ITestCase.cs" />
+    <Compile Include="Domain\Extensibility\Engine\ITestRunner.cs" />
+    <Compile Include="Domain\Imports\DllImports.cs" />
+    <Compile Include="Dto\AlgorithmResult.cs" />
+    <Compile Include="Dto\CaseResult.cs" />
+    <Compile Include="Dto\MemorySize.cs" />
+    <Compile Include="Dto\PerformanceMeasureData.cs" />
+    <Compile Include="Dto\Point.cs" />
+    <Compile Include="Dto\CaseReport.cs" />
+    <Compile Include="Dto\TestReport.cs" />
+    <Compile Include="Dto\ResultItem.cs" />
+    <Compile Include="Dto\Report.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="X0AlgorithmNinjectModule.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
